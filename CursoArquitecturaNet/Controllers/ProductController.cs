@@ -1,4 +1,5 @@
-﻿using CursoArquitecturaNet.Application.Interfaces;
+﻿using AutoMapper;
+using CursoArquitecturaNet.Application.Interfaces;
 using CursoArquitecturaNet.Core.Entities;
 using CursoArquitecturaNet.DTOs;
 using Microsoft.AspNetCore.Mvc;
