@@ -2,8 +2,11 @@ using CursoArquitecturaNet.Application.Interfaces;
 using CursoArquitecturaNet.Application.Services;
 using CursoArquitecturaNet.Core.Repositories;
 using CursoArquitecturaNet.Core.Repositories.Base;
+using CursoArquitecturaNet.Infraestructure.Data;
 using CursoArquitecturaNet.Infraestructure.Repository;
 using CursoArquitecturaNet.Infraestructure.Repository.Base;
+using Microsoft.EntityFrameworkCore;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +19,8 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IProductRepository, ProductRepository>();
+
+builder.Services.AddDbContext<CursoArquitecturaNetContext>(c => c.UseInMemoryDatabase("CursoArquitecturaNetConnection"));
 
 builder.Services.AddScoped<IProductService, ProductsService>();
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
