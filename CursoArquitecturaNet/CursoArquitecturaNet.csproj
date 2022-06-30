@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\CursoArquitecturaNet.Application\CursoArquitecturaNet.Application.csproj" />
+    <ProjectReference Include="..\CursoArquitecturaNet.Infraestructure\CursoArquitecturaNet.Infraestructure.csproj" />
   </ItemGroup>
 
 </Project>
